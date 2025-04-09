@@ -1,13 +1,15 @@
 import pandas as pd
 
-# URL to the CSV export of the dataset
-url = "https://data.wprdc.org/datastore/dump/a9a1d93a-9d3b-4c18-bd80-82ed6f86404a"
 
-# Load the dataset
-df = pd.read_csv(url)
+dataUrl = "https://data.wprdc.org/datastore/dump/a9a1d93a-9d3b-4c18-bd80-82ed6f86404a"
 
-# Show the first few rows
-print(df.head())
+# load dataset
+data = pd.read_csv(dataUrl)
 
-# Optionally save a local copy
-df.to_csv("road_closures.csv", index=False)
+
+# Preview data set
+print(data.head())
+
+
+#optional, local copy
+data.to_csv("road_closures.csv", index=False)
